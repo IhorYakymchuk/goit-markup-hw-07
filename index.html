@@ -25,7 +25,7 @@
   </head>
   <body>
     <!--Шапка сайта-->
-    <header class="header">
+    <header class="header" data-header>
       <div class="container header-container">
         <a class="logo logo-header link" href="./index.html"
           >Web<span class="studio-header">Studio</span>
@@ -645,21 +645,23 @@
         <div class="subscribe-container">
           <p class="slogan subscribe-slogan">Підпишіться на розсилку</p>
           <form class="subsribe-form">
-            <label class="email-label visually-hidden" for="mail-subscribe"></label>
-            <input
-              class="email-input"
-              type="email"
-              name="mail-subscribe"
-              id="mail-subscribe"
-              placeholder="E-mail"
-              required
-            />
-            <button class="subscribe-btn" type="submit">
-              Підписатися
-              <svg class="subscribe-icon" width="24" height="24">
-                <use href="./images/icons.svg#send-footer"></use>
-              </svg>
-            </button>
+            <div class="flex-cont">
+              <label class="email-label visually-hidden" for="mail-subscribe"></label>
+              <input
+                class="email-input"
+                type="email"
+                name="mail-subscribe"
+                id="mail-subscribe"
+                placeholder="E-mail"
+                required
+              />
+              <button class="subscribe-btn" type="submit">
+                Підписатися
+                <svg class="subscribe-icon" width="24" height="24">
+                  <use href="./images/icons.svg#send-footer"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -676,61 +678,65 @@
 
         <!-- Registration form -->
 
-        <form class="form modal-form">
-          <strong class="form-title">Залиште свої дані, ми вам передзвонимо</strong>
+        <form class="register-form">
+          <strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
+          <div class="register-form-group" role="group">
+            <label class="register-form-wrap">
+              <span class="register-form-label">Ім'я</span>
+              <input class="register-form-input" type="text" required />
+              <svg class="register-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#person-form"></use>
+              </svg>
+            </label>
+            <label class="register-form-wrap">
+              <span class="register-form-label">Телефон</span>
+              <input class="register-form-input" type="tel" required />
+              <svg class="register-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#phone-form"></use>
+              </svg>
+            </label>
+            <label class="register-form-wrap">
+              <span class="register-form-label">Пошта</span>
+              <input class="register-form-input" type="email" required />
+              <svg class="register-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#email-form"></use>
+              </svg>
+            </label>
+            <label class="register-form-wrap">
+              <span class="register-form-label">Коментар</span>
+              <textarea
+                class="register-form-message"
+                name="message"
+                rows="5"
+                placeholder="Введіть текст"
+              ></textarea>
+            </label>
+          </div>
 
-          <label class="registration-label" for="name">Ім'я</label>
-          <div class="input-field">
+          <label class="register-form-agreement">
             <input
-              class="form-input"
-              type="text"
-              name="name"
-              id="name"
-              placeholder=""
-              autofocus
+              class="register-checkbox visually-hidden"
+              type="checkbox"
+              name="agreement"
               required
             />
-            <svg class="registration-icon" width="18" height="18">
-              <use href="./images/icons.svg#person-form"></use>
+            <svg class="register-icon" width="16" height="15">
+              <use class="register-icon-uncheck" href="./images/icons.svg#icon-uncheck"></use>
+              <use class="register-icon-check" href="./images/icons.svg#icon-check"></use>
             </svg>
-          </div>
-
-          <label class="registration-label" for="tel">Телефон</label>
-          <div class="input-field">
-            <input class="form-input" type="tel" name="tel" id="tel" placeholder="" required />
-            <svg class="registration-icon" width="18" height="18">
-              <use href="./images/icons.svg#phone-form"></use>
-            </svg>
-          </div>
-
-          <label class="registration-label" for="mail">Пошта</label>
-          <div class="input-field">
-            <input class="form-input" type="email" name="mail" id="mail" placeholder="" required />
-            <svg class="registration-icon" width="18" height="18">
-              <use href="./images/icons.svg#email-form"></use>
-            </svg>
-          </div>
-
-          <label class="registration-label" for="comment">Коментар</label>
-          <textarea
-            class="comment"
-            name="comment"
-            id="comment"
-            placeholder="Введіть текст"
-          ></textarea>
-
-          <label class="policy-label"
-            ><input class="checkbox" type="checkbox" name="policy" required />
-            <span class="custom-checkbox"></span>Погоджуюся з розсилкою та приймаю&nbsp;
-            <a class="policy-link" href="" target="_blank" rel="noopener noreferrer"
-              >Умови договору</a
-            >
+            <span class="register-form-agreement-text">
+              Погоджуюся з розсилкою та приймаю
+              <a class="register-form-agreement-link" href="">Умови договору</a>
+            </span>
           </label>
 
-          <button class="registration-btn" type="submit">Відправити</button>
+          <button class="register-form-btn" type="submit">Відправити</button>
         </form>
       </div>
     </div>
+
+    <!-- JS header-scroll script -->
+    <script src="./js/header-scroll.js"></script>
 
     <!-- JS modal window script -->
     <script src="./js/modal.js"></script>
