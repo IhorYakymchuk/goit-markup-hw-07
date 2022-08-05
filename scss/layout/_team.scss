@@ -1,0 +1,72 @@
+.team {
+  text-align: center;
+  background-color: var(--secondary-bg-color);
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--card-set-gap);
+}
+
+.team__item {
+  flex-basis: calc((100% - var(--card-set-gap) * 3) / 4);
+
+  background-color: var(--primary-bg-color);
+}
+
+.team__card {
+  box-shadow: var(--card-shadow);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__caption {
+  padding: 30px 0;
+}
+
+.team__subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team__position {
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: var(--secondary-text-color);
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.socials__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  color: var(--primary-icons-fill-color);
+
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--white-text-color);
+  }
+}
+
+/* при currentColor іконка копіює батьківський колір - колір LINK */
+.socials__icon {
+  fill: currentColor;
+}

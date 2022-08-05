@@ -1,0 +1,117 @@
+.footer {
+  background-color: var(--hero-footer-bg-color);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__overlay {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address-container {
+  margin-right: 70px;
+}
+
+.studio-footer {
+  color: var(--white-text-color);
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.address {
+  margin-top: 20px;
+  font-style: normal;
+}
+
+.address__link {
+  color: var(--white-text-color);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+  margin-bottom: 9px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.address__item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.address__mail,
+.address__tel {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-weight: 400;
+  line-height: 1.71;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address__mail:hover,
+.address__mail:focus,
+.address__tel:hover,
+.address__tel:focus {
+  color: var(--accent-color);
+}
+
+.footer__socials--container {
+  margin-right: 93px;
+}
+
+.subscribe__slogan {
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer__socials--list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer__socials--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--footer-icons-bg-color);
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+
+  &:hover &,
+  &:focus & {
+    background-color: var(--accent-color);
+    fill: var(--white-text-color);
+  }
+}
+
+.footer__socials--icon {
+  fill: var(--white-text-color);
+}
